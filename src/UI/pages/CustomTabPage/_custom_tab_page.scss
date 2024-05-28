@@ -36,4 +36,18 @@
     align-items: center;
     gap: 1rem;
   }
+  &__middle {
+    padding: 0rem 1rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+    &__row {
+      //   border: 1px solid blue;
+    }
+
+    &__bottom {
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(15px);
+    }
+  }
 }

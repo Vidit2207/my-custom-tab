@@ -1,0 +1,17 @@
+.emails__heading {
+  padding: 1rem;
+  border: 2px solid white;
+  width: 100%;
+  color: white;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+
+.emails {
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-transform: capitalize;
+}
