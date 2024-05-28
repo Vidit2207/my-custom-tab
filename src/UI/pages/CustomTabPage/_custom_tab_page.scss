@@ -1,0 +1,39 @@
+.custom-tab {
+  background-color: aqua;
+
+  width: 100%;
+  height: 100svh;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230930/pngtree-3d-computer-and-yellow-code-a-programmer-s-toolset-image_13526520.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    $alpha: 0.92;
+    $color-1: rgba(rgb(0, 0, 0), $alpha);
+    $color-2: rgba(rgb(29, 29, 29), $alpha);
+
+    backdrop-filter: hue-rotate(150deg) blur(2px);
+    content: " ";
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: 0;
+    background-image: linear-gradient(135deg, $color-1 35%, $color-2);
+    background-size: 5rem;
+  }
+
+  &__column {
+    border: 1px solid red;
+    z-index: 1;
+    padding: 1rem;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

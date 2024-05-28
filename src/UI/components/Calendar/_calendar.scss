@@ -1,0 +1,126 @@
+$color: rgb(0, 119, 255);
+.calendar-container {
+  width: 100%;
+  // aspect-ratio: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  //   font-family: $font-roboto;
+  font-family: sans-serif;
+
+  //   margin: 2rem 0rem;
+  border: 2px solid $color;
+  user-select: none;
+}
+
+.calendar-controls {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  //   background-color: $color;
+  padding: 0.75rem 0rem;
+  place-items: center;
+  //   gap: 1rem;
+  color: white;
+
+  &__arrow {
+    // background-color: rgb(85, 10, 10);
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0.5rem;
+    line-height: 2rem;
+  }
+  &__current {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &--text {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      line-height: 0rem;
+      user-select: none;
+      padding: 0.5rem;
+    }
+
+    &--month {
+      border: 2px solid transparent;
+      justify-content: end;
+    }
+    &--year {
+      background-color: transparent;
+      outline: transparent;
+      border: 2px solid transparent;
+      color: white;
+      transition: 0.1s linear;
+
+      &:hover {
+        backdrop-filter: brightness(450%);
+      }
+
+      &:focus {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+}
+
+.calendar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  //   gap: 10px 1px;
+  // font-family: $font-oswald;
+  // font-family: $font-roboto;
+  // font-family: $font-syne;
+  //   font-family: $font-tektur;
+  font-family: sans-serif;
+  padding-bottom: 1rem;
+
+  &__day {
+    color: aliceblue;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%/25%;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color;
+    border-top: 2px solid $color;
+    border-bottom: 2px solid $color;
+  }
+
+  &__date {
+    color: $color;
+    text-shadow: 0 0 5px $color, 0 0 10px $color, 0 0 15px $color,
+      0 0 25px $color;
+    width: 100%;
+    aspect-ratio: 1;
+    font-size: 1.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      box-shadow: 0 0 5px $color, 0 0 10px $color, 0 0 15px $color;
+      border-radius: 50%;
+      width: 90%;
+      margin: auto;
+
+      background-color: $color;
+      color: white;
+      text-shadow: 0 0 5px white;
+    }
+  }
+}

@@ -1,1 +1,1 @@
-// export {default as } from ".";
+export { default as CustomTabPage } from "./CustomTabPage/CustomTabPage";

@@ -1,0 +1,51 @@
+.neon-hybrid-clock{
+
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+
+    $color: $color-dark;
+
+    background-color: transparent;
+
+
+    &__circle{
+        border-radius: 500rem;
+        position: absolute;  
+        top: 50%;      
+        left: 50%;
+        transform: translate(-50%, -50%);
+        aspect-ratio: 1;
+
+        &::before{
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 1rem);
+            aspect-ratio: 1;
+            border-radius: 500rem;
+            background-color: $color;
+
+        }
+
+
+        
+        &--second{
+            width: 90%;
+            background-color: aqua;
+            z-index: 1;
+        }
+        &--minute{
+            width: 70%;
+            background-color: rgb(0, 138, 138);
+            z-index: 2;
+        }
+        &--hour{
+            width: 50%;
+            background-color: rgb(0, 70, 70);
+            z-index: 3;
+        }
+    }
+}
