@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { Calendar, EmailLink, NeonDigitalClock } from "../../components";
-import { EmailList } from "../../containers";
+import {
+  Calendar,
+  EmailLink,
+  ExternalLink,
+  NeonDigitalClock,
+} from "../../components";
+import { EmailList, ExternalLinkList } from "../../containers";
 
 const CustomTabPage = () => {
   return (
@@ -12,7 +17,9 @@ const CustomTabPage = () => {
       </section>
       <section className="custom-tab__middle custom-tab__column">
         <div className="custom-tab__middle__top custom-tab__middle__row"></div>
-        <div className="custom-tab__middle__bottom custom-tab__middle__row"></div>
+        <div className="custom-tab__middle__bottom custom-tab__middle__row scrollbar">
+          <ExternalLinkList></ExternalLinkList>
+        </div>
       </section>
       <section className="custom-tab__right custom-tab__column">
         <NeonDigitalClock></NeonDigitalClock>

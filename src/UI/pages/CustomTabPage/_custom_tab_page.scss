@@ -5,22 +5,26 @@
   height: 100svh;
   display: grid;
   grid-template-columns: 20% 60% 20%;
-  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230930/pngtree-3d-computer-and-yellow-code-a-programmer-s-toolset-image_13526520.png);
+  //   background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230930/pngtree-3d-computer-and-yellow-code-a-programmer-s-toolset-image_13526520.png);
+  background-image: url(/src/assets/bg/411993-artwork-DeviantArt-fantasy-art-digital-art-colorful.png);
+  background-image: url(/src/assets/bg/wallpapersden.com_surreal-psychedelic-landscape-amazing-ai-art_3840x2160.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
+  filter: brightness(120%);
 
   &::before {
-    $alpha: 0.92;
-    $color-1: rgba(rgb(0, 0, 0), $alpha);
-    $color-2: rgba(rgb(29, 29, 29), $alpha);
+    $alpha: 0.85;
+    $color-1: rgba(rgb(5, 0, 34), $alpha);
+    $color-2: rgba(rgb(14, 0, 92), $alpha);
 
-    backdrop-filter: hue-rotate(150deg) blur(2px);
+    // backdrop-filter: hue-rotate(150deg) blur(2px);
+    backdrop-filter: blur(2px);
     content: " ";
     position: absolute;
     inset: 0 0 0 0;
     z-index: 0;
-    background-image: linear-gradient(135deg, $color-1 35%, $color-2);
+    background-image: linear-gradient(135deg, $color-1 35%, $color-2 65%);
     background-size: 5rem;
   }
 
@@ -46,8 +50,12 @@
     }
 
     &__bottom {
-      background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(15px);
+      max-height: 66svh;
+      //   background-color: rgba(0, 0, 0, 0.5);
+      //   backdrop-filter: blur(15px);
+      //   display: grid;
+      //   grid-template-columns: repeat(6, 1fr);
+      overflow-y: scroll;
     }
   }
 }
